@@ -37,5 +37,8 @@ npm install -g prettier
 # 4.2 Install [yapf](https://github.com/google/yapf).
 pip3 install -U yapf
 
-# 4.1 Install [rufo](https://github.com/ruby-formatter/rufo).
+# 4.3 Install [rufo](https://github.com/ruby-formatter/rufo).
 gem install rufo
+
+# 4.4 Install [pandoc](https://pandoc.org/MANUAL.html).
+sudo apt install -y pandoc
