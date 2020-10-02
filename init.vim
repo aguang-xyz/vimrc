@@ -37,6 +37,21 @@ call plug#begin(stdpath('data') . '/plugged')
   " Use key '`' to toggle NERDTree.
   nmap ` :NERDTreeToggle<CR>
 
+  " Show git status in file system explorer.
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+
+  let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'~',
+                \ 'Staged'    :'+',
+                \ 'Untracked' :'*',
+                \ 'Renamed'   :'»',
+                \ 'Unmerged'  :'=',
+                \ 'Deleted'   :'x',
+                \ 'Dirty'     :'×',
+                \ 'Ignored'   :' ',
+                \ 'Clean'     :'ø',
+                \ 'Unknown'   :'?',
+                \ }
 
   " 5. Auto completion framework, [Deoplete](https://github.com/Shougo/deoplete.nvim).
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
