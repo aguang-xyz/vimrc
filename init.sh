@@ -42,3 +42,6 @@ gem install rufo
 
 # 4.4 Install [pandoc](https://pandoc.org/MANUAL.html).
 sudo apt install -y pandoc
+
+# 4.5 Install [clang-format](http://clang.llvm.org/docs/ClangFormat.html).
+sudo apt install -y clang-format
