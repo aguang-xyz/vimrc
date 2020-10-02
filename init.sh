@@ -28,3 +28,14 @@ then
 else
   echo "[WARN] Directory \`$NVM_CONF_DIR/init.vim\` already exists."
 fi
+
+# 4. Install formatters.
+
+# 4.1 Install [prettier](https://github.com/prettier/prettier).
+npm install -g prettier
+
+# 4.2 Install [yapf](https://github.com/google/yapf).
+pip3 install -U yapf
+
+# 4.1 Install [rufo](https://github.com/ruby-formatter/rufo).
+gem install rufo

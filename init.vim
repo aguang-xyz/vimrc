@@ -59,4 +59,14 @@ call plug#begin(stdpath('data') . '/plugged')
   " Disable type information of completions.
   let g:deoplete#sources#jedi#enable_typeinfo = 0
 
+
+  " 4. Auto formatter, [neoformat](https://github.com/sbdchd/neoformat).
+  Plug 'sbdchd/neoformat'
+
+  " Auto format on save.
+  augroup fmt
+    autocmd!
+    autocmd BufWritePre * undojoin | Neoformat
+  augroup END
+
 call plug#end()
