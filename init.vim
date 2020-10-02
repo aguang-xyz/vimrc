@@ -63,6 +63,15 @@ call plug#begin(stdpath('data') . '/plugged')
   " 4. Auto formatter, [neoformat](https://github.com/sbdchd/neoformat).
   Plug 'sbdchd/neoformat'
 
+  " Enable alignment
+  let g:neoformat_basic_format_align = 1
+
+  " Enable tab to spaces conversion
+  let g:neoformat_basic_format_retab = 1
+
+  " Enable trimmming of trailing whitespace
+  let g:neoformat_basic_format_trim = 1
+
   " Auto format on save.
   augroup fmt
     autocmd!
