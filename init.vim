@@ -22,25 +22,34 @@ call plug#begin(stdpath('data') . '/plugged')
   " 1. Status line, [vim-airline](https://github.com/vim-airline/vim-airline).
   Plug 'vim-airline/vim-airline'
 
-  " 2. File system explorer, [NERDTree](https://github.com/preservim/nerdtree).
+
+  " 2. Git status, [vim-gitgutter](https://github.com/airblade/vim-gitgutter).
+  Plug 'airblade/vim-gitgutter'
+
+
+  " 3. Start screen, [vim-startify](https://github.com/mhinz/vim-startify).
+  Plug 'mhinz/vim-startify'
+
+
+  " 4. File system explorer, [NERDTree](https://github.com/preservim/nerdtree).
   Plug 'preservim/nerdtree'
 
   " Use key '`' to toggle NERDTree.
   nmap ` :NERDTreeToggle<CR>
 
 
-  " 3. Auto completion framework, [Deoplete](https://github.com/Shougo/deoplete.nvim).
+  " 5. Auto completion framework, [Deoplete](https://github.com/Shougo/deoplete.nvim).
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
   " Use deoplete by default.
   let g:deoplete#enable_at_startup = 1
 
 
-  " 3.1 Auto completion for Ruby.
+  " 5.1 Auto completion for Ruby.
   Plug 'fishbullet/deoplete-ruby'
 
 
-  " 3.2 Auto completion for Javascript.
+  " 5.2 Auto completion for Javascript.
   Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
   " Include the types of the completions.
@@ -54,14 +63,14 @@ call plug#begin(stdpath('data') . '/plugged')
         \ ]
 
 
-  " 3.3 Auto completion for Python.
+  " 5.3 Auto completion for Python.
   Plug 'deoplete-plugins/deoplete-jedi', { 'do': 'pip3 install --user jedi' }
 
   " Disable type information of completions.
   let g:deoplete#sources#jedi#enable_typeinfo = 0
 
 
-  " 4. Auto formatter, [neoformat](https://github.com/sbdchd/neoformat).
+  " 6. Auto formatter, [neoformat](https://github.com/sbdchd/neoformat).
   Plug 'sbdchd/neoformat'
 
   " Enable tab to spaces conversion
@@ -77,7 +86,11 @@ call plug#begin(stdpath('data') . '/plugged')
   augroup END
 
 
-  " 5. Git status, [vim-gitgutter](https://github.com/airblade/vim-gitgutter).
-  Plug 'airblade/vim-gitgutter'
+  " 7. Autogenerate tags when writing HTML or XML.
+  " [emmet-vim](https://github.com/mattn/emmet-vim).
+  Plug 'mattn/emmet-vim'
+
+  " Use double comma as magic key.
+  let g:user_emmet_leader_key = ','
 
 call plug#end()
