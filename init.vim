@@ -1,7 +1,7 @@
 " When processing tab, insert spaces.
 set expandtab
 
-" Show existing tab with 2 spaces width. 
+" Show existing tab with 2 spaces width.
 set tabstop=2 softtabstop=2
 
 " When indenting with '>', use 2 spaces width.
@@ -13,13 +13,14 @@ set colorcolumn=80
 " Show line number.
 set number
 
+" Theme.
+colorscheme industry
+
 " Install plugins via [vim-plug](https://github.com/junegunn/vim-plug).
 call plug#begin(stdpath('data') . '/plugged')
-  
+
   " 1. Status line, [vim-airline](https://github.com/vim-airline/vim-airline).
   Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-
 
   " 2. File system explorer, [NERDTree](https://github.com/preservim/nerdtree).
   Plug 'preservim/nerdtree'
@@ -45,12 +46,12 @@ call plug#begin(stdpath('data') . '/plugged')
   " Include the types of the completions.
   let g:deoplete#sources#ternjs#types = 1
 
-  " Support extra filetypes. 
+  " Support extra filetypes.
   let g:deoplete#sources#ternjs#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ 'vue',
-                \ ]
+        \ 'jsx',
+        \ 'javascript.jsx',
+        \ 'vue',
+        \ ]
 
 
   " 3.3 Auto completion for Python.
@@ -63,9 +64,6 @@ call plug#begin(stdpath('data') . '/plugged')
   " 4. Auto formatter, [neoformat](https://github.com/sbdchd/neoformat).
   Plug 'sbdchd/neoformat'
 
-  " Enable alignment
-  let g:neoformat_basic_format_align = 1
-
   " Enable tab to spaces conversion
   let g:neoformat_basic_format_retab = 1
 
@@ -77,5 +75,9 @@ call plug#begin(stdpath('data') . '/plugged')
     autocmd!
     autocmd BufWritePre * undojoin | Neoformat
   augroup END
+
+
+  " 5. Git status, [vim-gitgutter](https://github.com/airblade/vim-gitgutter).
+  Plug 'airblade/vim-gitgutter'
 
 call plug#end()

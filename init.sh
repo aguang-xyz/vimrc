@@ -10,7 +10,7 @@ mkdir -p $NVM_DATA_DIR
 # 2.2 Create soft link of `autoload` if not exists.
 if [ ! -d "$NVM_DATA_DIR/autoload" ]
 then
-  ln -s $PWD/autoload "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload
+  ln -s $PWD/autoload ${NVM_DATA_DIR}/autoload
 else
   echo "[WARN] Directory \`$NVM_DATA_DIR/autoload\` already exists."
 fi
