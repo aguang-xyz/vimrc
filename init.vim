@@ -108,4 +108,8 @@ call plug#begin(stdpath('data') . '/plugged')
   " Use double comma as magic key.
   let g:user_emmet_leader_key = ','
 
+
+  " 8. Auto pairs, [auto-pairs](https://github.com/jiangmiao/auto-pairs).
+  Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
