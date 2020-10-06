@@ -119,7 +119,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'jiangmiao/auto-pairs'
 
 
-  " 9. Spelling check.
+  " 9. Spelling check, [spelunker](https://github.com/kamykn/spelunker.vim).
   Plug 'kamykn/spelunker.vim'
 
 call plug#end()
