@@ -100,6 +100,9 @@ call plug#begin(stdpath('data') . '/plugged')
   "   autocmd BufWritePre * undojoin | Neoformat
   " augroup END
 
+  " Use key '=' to format current file.
+  nmap = :Neoformat<CR>
+
   " Use clang-format to format c / c++ files.
   let g:neoformat_enabled_c = ['clangformat']
   let g:neoformat_enabled_cpp = ['clangformat']
@@ -121,5 +124,14 @@ call plug#begin(stdpath('data') . '/plugged')
 
   " 9. Spelling check, [spelunker](https://github.com/kamykn/spelunker.vim).
   Plug 'kamykn/spelunker.vim'
+
+
+  " 10. Git support, [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive).
+  "
+  " Support some commands like:
+  "   :G commit
+  "   :G blame
+  "   :G diff
+  Plug 'tpope/vim-fugitive'
 
 call plug#end()
