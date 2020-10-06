@@ -95,11 +95,17 @@ call plug#begin(stdpath('data') . '/plugged')
   let g:neoformat_basic_format_trim = 1
 
   " Auto format on save.
-  augroup fmt
-    autocmd!
-    autocmd BufWritePre * undojoin | Neoformat
-  augroup END
+  " augroup fmt
+  "   autocmd!
+  "   autocmd BufWritePre * undojoin | Neoformat
+  " augroup END
 
+  " Use clang-format to format c / c++ files.
+  let g:neoformat_enabled_c = ['clangformat']
+  let g:neoformat_enabled_cpp = ['clangformat']
+
+  " Use uncrustify to format c# files.
+  let g:neoformat_enabled_cs = ['astyle']
 
   " 7. Autogenerate tags when writing HTML or XML.
   " [emmet-vim](https://github.com/mattn/emmet-vim).
@@ -111,5 +117,9 @@ call plug#begin(stdpath('data') . '/plugged')
 
   " 8. Auto pairs, [auto-pairs](https://github.com/jiangmiao/auto-pairs).
   Plug 'jiangmiao/auto-pairs'
+
+
+  " 9. Spelling check.
+  Plug 'kamykn/spelunker.vim'
 
 call plug#end()
