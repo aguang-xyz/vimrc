@@ -16,6 +16,9 @@ set number
 " Theme.
 colorscheme industry
 
+" Use system clipboard.
+set clipboard+=unnamedplus
+
 " Install plugins via [vim-plug](https://github.com/junegunn/vim-plug).
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -133,5 +136,8 @@ call plug#begin(stdpath('data') . '/plugged')
   "   :G blame
   "   :G diff
   Plug 'tpope/vim-fugitive'
+
+  " Browser into Github.
+  Plug 'tpope/vim-rhubarb'
 
 call plug#end()
