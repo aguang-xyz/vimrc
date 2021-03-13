@@ -56,6 +56,9 @@ call plug#begin(stdpath('data') . '/plugged')
                 \ 'Unknown'   :'?',
                 \ }
 
+  " Show hidden files.
+  let g:NERDTreeShowHidden = 1
+
   " 5. Auto completion framework, [Deoplete](https://github.com/Shougo/deoplete.nvim).
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
@@ -113,6 +116,9 @@ call plug#begin(stdpath('data') . '/plugged')
   " Use uncrustify to format c# files.
   let g:neoformat_enabled_cs = ['astyle']
 
+  " Use rufo to format ruby files.
+  let g:neoformat_enabled_ruby = ['rufo']
+
   " 7. Autogenerate tags when writing HTML or XML.
   " [emmet-vim](https://github.com/mattn/emmet-vim).
   Plug 'mattn/emmet-vim'
@@ -139,5 +145,9 @@ call plug#begin(stdpath('data') . '/plugged')
 
   " Browser into Github.
   Plug 'tpope/vim-rhubarb'
+
+  " 11. Typescript support.
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 call plug#end()
