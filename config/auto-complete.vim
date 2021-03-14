@@ -39,4 +39,4 @@ Plug 'OmniSharp/omnisharp-vim'
 
 " Auto completion for Typescript.
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'leafgarland/typescript-vim'
