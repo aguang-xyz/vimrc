@@ -1,51 +1,71 @@
-# 1. Install NeoVim.
-sudo apt install -y neovim python-neovim python3-neovim
+#!/usr/bin/env bash
 
-# 2. Link `autoload`.
-NVM_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site
+init_mac() {
 
-# 2.1 Make sure the data directory exist.
-mkdir -p $NVM_DATA_DIR
+  # Install vim8.
+  brew upgrade vim
 
-# 2.2 Create soft link of `autoload` if not exists.
-if [ ! -d "$NVM_DATA_DIR/autoload" ]; then
-  ln -s $PWD/autoload ${NVM_DATA_DIR}/autoload
-else
-  echo "[WARN] Directory \`$NVM_DATA_DIR/autoload\` already exists."
-fi
+  # Install [prettier](https://github.com/prettier/prettier).
+  sudo npm install -g prettier
 
-# 3. Link `init.vim`.
-NVM_CONF_DIR="$HOME/.config/nvim"
+  # Install [yapf](https://github.com/google/yapf).
+  pip3 install -U yapf
 
-# 3.1 Make sure the config directory exist.
-mkdir -p $NVM_CONF_DIR
+  # Install [rufo](https://github.com/ruby-formatter/rufo).
+  sudo gem install rufo
 
-# 3.2 Create soft link of `init.vim` if not exists.
-if [ ! -f "$NVM_CONF_DIR/init.vim" ]; then
-  ln -s $PWD/init.vim $NVM_CONF_DIR/init.vim
-else
-  echo "[WARN] Directory \`$NVM_CONF_DIR/init.vim\` already exists."
-fi
+  # Install [pandoc](https://pandoc.org/MANUAL.html).
+  brew upgrade pandoc
 
-# 4. Install formatters.
+  # Install [clang-format](http://clang.llvm.org/docs/ClangFormat.html).
+  brew upgrade clang-format
 
-# 4.1 Install [prettier](https://github.com/prettier/prettier).
-npm install -g prettier
+  # Install [astyle](http://astyle.sourceforge.net/).
+  brew upgrade astyle
 
-# 4.2 Install [yapf](https://github.com/google/yapf).
-pip3 install -U yapf
+  # Install [shfmt](https://formulae.brew.sh/formula/shfmt).
+  brew upgrade shfmt
+}
 
-# 4.3 Install [rufo](https://github.com/ruby-formatter/rufo).
-gem install rufo
+init_linux() {
 
-# 4.4 Install [pandoc](https://pandoc.org/MANUAL.html).
-sudo apt install -y pandoc
+  # Install vim8.
+  sudo apt install vim
 
-# 4.5 Install [clang-format](http://clang.llvm.org/docs/ClangFormat.html).
-sudo apt install -y clang-format
+  # Install [prettier](https://github.com/prettier/prettier).
+  npm install -g prettier
 
-# 4.6 Install [astyle](http://astyle.sourceforge.net/).
-sudo apt install astyle
+  # Install [yapf](https://github.com/google/yapf).
+  pip3 install -U yapf
 
-# 4.7 Install [shfmt](https://snapcraft.io/install/shfmt/ubuntu).
-sudo snap install shfmt
+  # Install [rufo](https://github.com/ruby-formatter/rufo).
+  gem install rufo
+
+  # Install [pandoc](https://pandoc.org/MANUAL.html).
+  sudo apt install -y pandoc
+
+  # Install [clang-format](http://clang.llvm.org/docs/ClangFormat.html).
+  sudo apt install -y clang-format
+
+  # Install [astyle](http://astyle.sourceforge.net/).
+  sudo apt install astyle
+
+  # Install [shfmt](https://snapcraft.io/install/shfmt/ubuntu).
+  sudo snap install shfmt
+}
+
+unsupported() {
+  echo "Unsupported system"
+  exit 1
+}
+
+main() {
+  unameOutput="$(uname -s)"
+  case "${unameOutput}" in
+    Darwin*) init_mac ;;
+    Linux*) init_linux ;;
+    *) unsupported ;;
+  esac
+}
+
+main
