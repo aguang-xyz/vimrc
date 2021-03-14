@@ -13,5 +13,5 @@
 git clone https://github.com/aguang-xyz/vim-profile.git ~/.vim
 
 # Execute the init script.
-cd ~/vim && ./init.sh
+cd ~/.vim && ./init.sh
 ```
