@@ -3,7 +3,7 @@
 init_mac() {
 
   # Install vim8.
-  brew upgrade vim
+  brew install vim
 
   # Install [prettier](https://github.com/prettier/prettier).
   sudo npm install -g prettier
@@ -15,16 +15,16 @@ init_mac() {
   sudo gem install rufo
 
   # Install [pandoc](https://pandoc.org/MANUAL.html).
-  brew upgrade pandoc
+  brew install pandoc
 
   # Install [clang-format](http://clang.llvm.org/docs/ClangFormat.html).
-  brew upgrade clang-format
+  brew install clang-format
 
   # Install [astyle](http://astyle.sourceforge.net/).
-  brew upgrade astyle
+  brew install astyle
 
   # Install [shfmt](https://formulae.brew.sh/formula/shfmt).
-  brew upgrade shfmt
+  brew install shfmt
 }
 
 init_linux() {
