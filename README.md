@@ -12,6 +12,6 @@
 # Clone this repository.
 git clone https://github.com/aguang-xyz/vim-profile.git ~/.vim
 
-# Execute the init script.
-cd ~/.vim && ./init.sh
+# Execute the install script.
+cd ~/.vim && ./install.sh
 ```
