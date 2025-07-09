@@ -19,15 +19,10 @@ set clipboard+=unnamedplus
 " Theme.
 colorscheme industry
 
-" Auto pairs, [auto-pairs](https://github.com/jiangmiao/auto-pairs).
-Plug 'jiangmiao/auto-pairs'
+" Enables file type detection.
+" This is critical for neoformat.
+filetype on
 
-" Fency start screen, [vim-startify](https://github.com/mhinz/vim-startify)
-Plug 'mhinz/vim-startify'
+" Enables syntax highlighting.
+syntax on
 
-" Git support, [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive).
-" Support some commands like:
-"   :G commit
-"   :G blame
-"   :G diff
-Plug 'tpope/vim-fugitive'
