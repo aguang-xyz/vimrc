@@ -1,11 +1,5 @@
-" File system explorer, [NERDTree](https://github.com/preservim/nerdtree).
-Plug 'preservim/nerdtree'
-
 " Use key '`' to toggle NERDTree.
 nmap ` :NERDTreeToggle<CR>
-
-" Show git status in file system explorer.
-Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Customize git status indicatros.
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -15,8 +9,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
               \ 'Renamed'   :'»',
               \ 'Unmerged'  :'=',
               \ 'Deleted'   :'x',
-              \ 'Dirty'     :'×',
-              \ 'Ignored'   :' ',
+              \ 'Dirty'     :'x',
+              \ 'Ignored'   :'*',
               \ 'Clean'     :'ø',
               \ 'Unknown'   :'?',
               \ }
