@@ -167,6 +167,11 @@ function copy_vim_profile() {
   echo "✅ ${HOME}/.vim has been updated"
 }
 
+function copy_tmux_config() {
+  cp -f ./.tmux.conf ${HOME}/.tmux.conf
+  echo "✅ ${HOME}/.tmux.conf has been updated"
+}
+
 function install_darwin() {
 
   install_brew
@@ -186,6 +191,7 @@ function install_darwin() {
   install_npm_package prettier
 
   copy_bash_profile
+  copy_tmux_config
 
   install_apple_terminal_theme "./themes/Gruvbox Dark.terminal"
 }
@@ -207,6 +213,7 @@ function install_linux() {
   npm install -g prettier
 
   copy_bash_profile
+  copy_tmux_config
 }
 
 function unsupported() {
