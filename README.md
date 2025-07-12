@@ -1,17 +1,13 @@
-# My VIM Profile.
+# My Dot Files.
 
-- Environment: Ubuntu 18.04 / OSX
-- Dependencies:
-  - Python 3
-  - Ruby
-  - Npm
+- Environment: `debian` / `macOS`
 
 ## Install.
 
 ```bash
 # Clone this repository.
-git clone https://github.com/aguang-xyz/.vim.git ~/.vim
+git clone https://github.com/aguang-xyz/dotfiles.git ~/Developer/dotfiles
 
 # Execute the install script.
-cd ~/.vim && ./install.sh
+cd ~/Developer/dotfiles && ./install.sh
 ```

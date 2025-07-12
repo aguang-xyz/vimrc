@@ -14,5 +14,4 @@ nmap = :Neoformat<CR>
 let g:neoformat_enabled_c = ['clang-format']
 let g:neoformat_enabled_cpp = ['clang-format']
 let g:neoformat_enabled_cs = ['astyle']
-let g:neoformat_enabled_ruby = ['rufo']
 
