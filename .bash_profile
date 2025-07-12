@@ -50,8 +50,32 @@ function enable_color_if_supports() {
   export LESS_TERMCAP_us=$'\E[1;32m'
 }
 
+function load_shortcuts() {
+
+  alias l='ls -CF'         # List with quick compact view
+  alias la='ls -lA'        # List all except . and ..
+  alias ..='cd ..'         # Go up one directory
+  alias ...='cd ../..'     # Go up two directories
+  alias ....='cd ../../..' # Go up three directories
+  alias c='clear'          # Clear screen
+  alias h='history'        # Show history
+
+  alias gs='git status'
+  alias ga='git add .'
+  alias gc='git commit -m'
+  alias gp='git push'
+  alias gl='git pull'
+  alias gco='git checkout'
+  alias gb='git branch'
+  alias gd='git diff'
+  alias gcl='git clone'
+  alias gcp='git cherry-pick'
+
+}
+
 ##############################################################################
 
 load_env
 enable_color_if_supports
+load_shortcuts
 

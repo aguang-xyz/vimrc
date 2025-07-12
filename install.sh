@@ -159,6 +159,7 @@ function install_apple_terminal_theme() {
 function copy_bash_profile() {
   cp -f ./.bash_profile ${HOME}/.bash_profile
   echo "✅ ${HOME}/.bash_profile has been updated"
+  source ${HOME}/.bash_profile
 }
 
 function copy_vim_profile() {
