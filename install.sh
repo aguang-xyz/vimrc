@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-function install_plugin() {
+function install_vim_plugin() {
   id="${1}"
-  dir="./pack/vendor/start/$(basename "${id}")"
+  dir="~/.vim/pack/vendor/start/$(basename "${id}")"
   repo="https://github.com/${id}.git"
   if [[ -d "${dir}" ]]; then
     git -C "${dir}" pull
@@ -12,39 +12,39 @@ function install_plugin() {
   echo ""
 }
 
-function install_plugins() {
+function install_vim_plugins() {
 
   # LSP.
   # see [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
   # see [vim-lsp-settings](https://github.com/mattn/vim-lsp-settings)
-  install_plugin "prabirshrestha/vim-lsp"
-  install_plugin "mattn/vim-lsp-settings"
+  install_vim_plugin "prabirshrestha/vim-lsp"
+  install_vim_plugin "mattn/vim-lsp-settings"
 
   # Auto complete.
   # see [asyncomplete](https://github.com/prabirshrestha/asyncomplete.vim)
   # see [asyncomplete-lsp](https://github.com/prabirshrestha/asyncomplete-lsp.vim)
-  install_plugin 'prabirshrestha/asyncomplete.vim'
-  install_plugin 'prabirshrestha/asyncomplete-lsp.vim'
+  install_vim_plugin 'prabirshrestha/asyncomplete.vim'
+  install_vim_plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
   # Auto pairs.
   # see [auto-pairs](https://github.com/jiangmiao/auto-pairs).
-  install_plugin "jiangmiao/auto-pairs"
+  install_vim_plugin "jiangmiao/auto-pairs"
 
   # Auto formatter.
   # see [neoformat](https://github.com/sbdchd/neoformat).
-  install_plugin "sbdchd/neoformat"
+  install_vim_plugin "sbdchd/neoformat"
 
   # File system explorer.
   # see: [NERDTree](https://github.com/preservim/nerdtree).
-  install_plugin "preservim/nerdtree"
+  install_vim_plugin "preservim/nerdtree"
 
   # Show git status in file system explorer.
   # see: [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
-  install_plugin "Xuyuanp/nerdtree-git-plugin"
+  install_vim_plugin "Xuyuanp/nerdtree-git-plugin"
 
   # Spell checking.
   # see: [spelunker](https://github.com/kamykn/spelunker.vim).
-  install_plugin "kamykn/spelunker.vim"
+  install_vim_plugin "kamykn/spelunker.vim"
 
   # Git support.
   # see: [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive).
@@ -52,17 +52,17 @@ function install_plugins() {
   #   :G commit
   #   :G blame
   #   :G diff
-  install_plugin "tpope/vim-fugitive"
+  install_vim_plugin "tpope/vim-fugitive"
 
   # Fancy start screen.
   # see: [vim-startify](https://github.com/mhinz/vim-startify).
-  install_plugin "mhinz/vim-startify"
+  install_vim_plugin "mhinz/vim-startify"
 }
 
 install_mac() {
 
   # Install vim plugins.
-  install_plugins
+  install_vim_plugins
 
   # Install vim.
   brew install vim
@@ -92,7 +92,7 @@ install_mac() {
 install_linux() {
 
   # Install vim plugins.
-  install_plugins
+  install_vim_plugins
 
   # Install vim.
   sudo apt install vim

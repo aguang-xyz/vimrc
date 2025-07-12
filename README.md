@@ -1,4 +1,4 @@
-# My VIM Profile.
+# My Profile.
 
 - Environment: Ubuntu 18.04 / OSX
 - Dependencies:
