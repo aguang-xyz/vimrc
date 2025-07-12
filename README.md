@@ -10,7 +10,7 @@
 
 ```bash
 # Clone this repository.
-git clone https://github.com/aguang-xyz/vim-profile.git ~/.vim
+git clone https://github.com/aguang-xyz/.vim.git ~/.vim
 
 # Execute the install script.
 cd ~/.vim && ./install.sh
