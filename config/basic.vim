@@ -16,8 +16,11 @@ set number
 " Use system clipboard.
 set clipboard+=unnamedplus
 
+" Background dark.
+set background=dark
+
 " Theme.
-colorscheme industry
+colorscheme gruvbox
 
 " Enables file type detection.
 " This is critical for neoformat.

@@ -14,6 +14,18 @@ function install_plugin() {
 
 function install_plugins() {
 
+  # LSP.
+  # see [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
+  # see [vim-lsp-settings](https://github.com/mattn/vim-lsp-settings)
+  install_plugin "prabirshrestha/vim-lsp"
+  install_plugin "mattn/vim-lsp-settings"
+
+  # Auto complete.
+  # see [asyncomplete](https://github.com/prabirshrestha/asyncomplete.vim)
+  # see [asyncomplete-lsp](https://github.com/prabirshrestha/asyncomplete-lsp.vim)
+  install_plugin 'prabirshrestha/asyncomplete.vim'
+  install_plugin 'prabirshrestha/asyncomplete-lsp.vim'
+
   # Auto pairs.
   # see [auto-pairs](https://github.com/jiangmiao/auto-pairs).
   install_plugin "jiangmiao/auto-pairs"
